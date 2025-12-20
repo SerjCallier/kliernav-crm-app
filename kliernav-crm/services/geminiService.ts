@@ -1,9 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AIMode } from "../types";
 
-// Always use const ai = new GoogleGenAI({apiKey: process.env.API_KEY}); as per guidelines
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
+// Always use const ai = new GoogleGenAI({apiKey: import.meta.env.VITE_API_KEY}); as per guidelinesconst ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY })
 export const generateAIResponse = async (
   prompt: string,
   mode: AIMode,
