@@ -24,6 +24,8 @@ jobs:
         working-directory: ./kliernav-crm      
       - name: Build
         run: npm run build
+                env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
         working-directory: ./kliernav-crm
       
       - name: Deploy to GitHub Pages
