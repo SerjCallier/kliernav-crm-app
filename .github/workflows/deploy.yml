@@ -25,7 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: npm ci
-            working-directory: ./kliernav-crm
+  working-directory: ./kliernav-crm
 
     - name: Build
       run: npm run build
