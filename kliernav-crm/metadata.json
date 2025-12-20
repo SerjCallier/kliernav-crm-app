@@ -1,0 +1,7 @@
+{
+  "name": "KlierNav CRM",
+  "description": "CRM inteligente para KlierNav Innovations con Drag & Drop, Dashboards y Asistente AI avanzado.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
