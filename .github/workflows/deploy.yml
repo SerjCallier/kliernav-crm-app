@@ -1,3 +1,9 @@
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+
 name: Deploy to GitHub Pages
 
 on:
