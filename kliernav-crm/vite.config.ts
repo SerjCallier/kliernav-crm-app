@@ -15,5 +15,5 @@ export default defineConfig({
     'process.env': {
       NODE_ENV: JSON.stringify('production'),
       API_KEY: JSON.stringify(process.env.VITE_API_KEY || ''), 
-          }
+          },
 });
