@@ -14,6 +14,5 @@ export default defineConfig({
     // Proporciona un objeto process.env básico para evitar errores en librerías externas
     'process.env': {
       NODE_ENV: JSON.stringify('production'),
-API_KEY: import.meta.env.VITE_API_KEY ? JSON.stringify(import.meta.env.VITE_API_KEY) : 'undefined'    },
-  },
+      API_KEY: JSON.stringify(process.env.VITE_API_KEY || ''),  },
 });
