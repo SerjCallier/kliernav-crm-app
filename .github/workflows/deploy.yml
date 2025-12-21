@@ -1,8 +1,7 @@
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
-
 
 name: Deploy to GitHub Pages
 
@@ -20,22 +19,22 @@ jobs:
         node-version: [18.x]
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      
+
       - name: Install dependencies
         run: npm install --legacy-peer-deps
         working-directory: ./kliernav-crm
-      
+
       - name: Build
         run: npm run build
         working-directory: ./kliernav-crm
         env:
           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-      
+
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v3
